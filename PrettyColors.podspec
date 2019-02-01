@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'PrettyColors'
-  spec.version = '5.0.2'
+  spec.version = '6.0.0'
   spec.summary = 'Styles and colors text in the Terminal with ANSI escape codes. Conforms to ECMA Standard 48.'
   spec.homepage = 'https://github.com/jdhealy/PrettyColors'
   spec.license = { :type => 'MIT', :file => 'LICENSE.md' }
@@ -16,4 +16,5 @@ Pod::Spec.new do |spec|
   spec.osx.deployment_target = '10.9'
   spec.watchos.deployment_target = '2.0'
   spec.tvos.deployment_target = '9.0'
+  spec.swift_version = '4.0.0'
 end
