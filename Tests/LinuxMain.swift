@@ -2,7 +2,7 @@
 // DO NOT EDIT
 
 import XCTest
-@testable import UnitTests
+@testable import PrettyColorsTests
 
 XCTMain([
   testCase(EqualityTests.allTests),
