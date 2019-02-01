@@ -34,41 +34,13 @@ matrix:
       env:
         - XCODE_SDK=appletvsimulator
           XCODE_ACTION="build-for-testing test-without-building"
-          XCODE_DESTINATION="name=Apple TV 1080p"
+          XCODE_DESTINATION="name=Apple TV 4K"
     - osx_image: xcode10.1
       env:
         - XCODE_SDK=watchsimulator
           XCODE_ACTION=build
           XCODE_DESTINATION="name=Apple Watch - 38mm"
     - osx_image: xcode10.1
-      env:
-        - JOB=CARTHAGE
-      script:
-        - brew update 1> /dev/null 2> /dev/null
-        - brew outdated carthage || brew upgrade carthage
-        - carthage build --no-skip-current
-        - for platform in Mac iOS tvOS watchOS; do test -d Carthage/Build/${platform}/PrettyColors.framework || exit 1; done
-    - osx_image: xcode9
-      env:
-        - XCODE_SDK=macosx
-          XCODE_ACTION=test
-          XCODE_DESTINATION="arch=x86_64"
-    - osx_image: xcode9
-      env:
-        - XCODE_SDK=iphonesimulator
-          XCODE_ACTION="build-for-testing test-without-building"
-          XCODE_DESTINATION="name=iPhone 6s"
-    - osx_image: xcode9
-      env:
-        - XCODE_SDK=appletvsimulator
-          XCODE_ACTION="build-for-testing test-without-building"
-          XCODE_DESTINATION="name=Apple TV 1080p"
-    - osx_image: xcode9
-      env:
-        - XCODE_SDK=watchsimulator
-          XCODE_ACTION=build
-          XCODE_DESTINATION="name=Apple Watch - 38mm"
-    - osx_image: xcode9
       env:
         - JOB=CARTHAGE
       script:
