@@ -20,7 +20,7 @@ let package = Package(
         .target(
             name: "PrettyColors",
             dependencies: [],
-            path: "Source/PrettyColors"),
+            path: "Source"),
         .testTarget(
             name: "PrettyColorsTests",
             dependencies: ["PrettyColors"],
