@@ -10,6 +10,6 @@ let package = Package(
     dependencies: [],
     targets: [
         .target(name: "PrettyColors", path: "Source"),
-        .testTarget(name: "UnitTests", dependencies: ["PrettyColors"], path: "Tests/PrettyColorsTests"),
+        .testTarget(name: "UnitTests", dependencies: ["PrettyColors"], path: "Tests"),
     ]
 )
